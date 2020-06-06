@@ -13,11 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Route::get('/about', function () {
-    $nama = 'zul';
-    return view('about', ['nama' => $nama]);
-});
+// Route::get('/about', function () {
+//     $nama = 'zul';
+//     return view('about', ['nama' => $nama]);
+// });
+
+
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+
+
+ 
